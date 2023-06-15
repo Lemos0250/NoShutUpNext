@@ -73,14 +73,14 @@ export function AuthProvider(props: any) {
         }
     }
 
-    useEffect(() => {
-        if (token) {
-            const user = decode(token) as any
-            setUser(user.payload as User)
-        } else {
-            Router.push("/login")
-        }
-    }, [token])
+    // useEffect(() => {
+    //     if (token) {
+    //         const user = decode(token) as any
+    //         setUser(user.payload as User)
+    //     } else {
+    //         Router.push("/login")
+    //     }
+    // }, [token])
 
     return (
         <AuthContext.Provider value={{ createUser, user, loginUser }}>
