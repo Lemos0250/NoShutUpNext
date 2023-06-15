@@ -17,7 +17,9 @@ export default function About() {
                     <div className="border-solid border-2 p-40 lg:m-20 shadow-xl  "></div>
 
                     <div className="lg:m-20 lg:mt-30 mt-[15%] ">
-                        <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+                        <a>O que nos motivou a produzir o projeto com esse tema é que existem muitas informações sobre a violência contra a mulher, porém mesmo com tantas informações, por diversas vezes é algo que fica implícito para muitas mulheres que sofrem violência doméstica e ainda não sabem o que fazer ou têm medo que seu agressor saia impune do crime cometido, então o objetivo deste projeto é tornar mais explícito para que cada vez mais mulheres estejam cientes do que fazer caso sofram violência doméstica.
+
+                        Os integrantes do Grupo são João Victor, Matheus Plácio, Paola Andrade e Arthur Cavalcanti.</a>
                     </div>
                 </div>
             </div>
