@@ -21,25 +21,49 @@ export default function Login() {
 
     return (
         <div>
-            <div className="bg-black">
+            <div className="flex flex-row">
 
-                <div className="flex flex-row h-screen lg:flex-row items-center justify-center shadow-xl bg-[#FFDEF6]">
-                    <div className="flex flex-col justify-center items-center bg-white rounded-lg lg:h-[65%] lg:w-[50%] w-full">
+                <div className={`
+                h-screen w-[50%]
+                bg-[#FFDEF6]
+                `}>
+                    <a>Penis</a>
 
-                        <div className="italic font-extrabold text-3xl text-[#6b0023] lg:my-[3%] mt-[5%]">
+                </div>
+
+                <div className="flex flex-row lg:flex-row
+                h-screen w-[50%] items-center justify-center shadow-xl">
+                    
+                    <div className={`flex flex-col 
+                    rounded-lg lg:w-[50%] w-full text-center
+                    `}>
+
+                        <div className={`
+                        italic font-extrabold text-3xl text-[#6b0023] 
+                        lg:my-[10%] 
+                        `}>
                             <span>Não se Cale !</span>
                         </div>
 
-                        <div className="text-ml justify-center items-center gap-2">
+                        <div className="text-ml justify-center items-center">
 
-                            <div className="flex flex-col lg:flex-row w-full gap-5">
-                                <input type='text' placeholder="Email" onChange={((e) => setEmail(e.target.value))} className="lg:w-[50%] border-2 rounded-lg p-2" />
+                            <div className="flex flex-col gap-5">
+                                <input type='text' placeholder="Email" onChange={((e) => setEmail(e.target.value))} 
+                                className={`lg:w-[100%] border-2 rounded-lg p-2`}/>
 
-                                <input type='text' placeholder="Senha" onChange={((e) => setPassword(e.target.value))} className="lg:w-[50%] border-2 rounded-lg p-2" />
+                                <input type='text' placeholder="Senha" onChange={((e) => setPassword(e.target.value))} 
+                                className="lg:w-[100%] border-2 rounded-lg p-2" />
                             </div>
 
+
+                        
                             {/* <Link to="/"> */}
-                            <div onClick={login} className="mt-[15%] cursor-pointer text-center border-solid border-2 rounded-lg p-2 bg-[#a6024f] text-white text-2xl">
+                            <div onClick={login} className={`
+                            cursor-pointer text-white
+                            border-solid border-2 rounded-lg 
+                            
+                            p-2 bg-[#a6024f] text-2xl my-[5%]
+                            `}>
                                 <span>Entrar</span>
                             </div>
                             {/* </Link> */}
@@ -51,7 +75,10 @@ export default function Login() {
                             </Link> */}
 
                             <Link href="/register">
-                                <div className="text-center border-solid border-2 rounded-lg p-2 bg-[#a6024f] text-white text-2xl">
+                                <div className="
+                                border-solid border-2 rounded-lg 
+
+                                p-2 bg-[#a6024f] text-white text-2xl">
                                     <span>Criar uma Conta</span>
                                 </div>
                             </Link>
