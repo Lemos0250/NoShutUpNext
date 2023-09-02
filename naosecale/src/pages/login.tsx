@@ -7,6 +7,8 @@ import Cookie from 'js-cookie'
 import Router from "next/router";
 import Link from "next/link";
 import UseAuth from "@/services/hooks/UseAuth";
+import Image from 'next/image'
+import { Imagem } from "@/components/Logo";
 
 export default function Login() {
     const { loginUser } = UseAuth()
@@ -21,31 +23,38 @@ export default function Login() {
 
     return (
         <div>
+
+            {/* Início da Primeira Parte*/}
+
             <div className="flex flex-row">
 
                 <div className={`
                 h-screen w-[50%]
-                bg-[#FFDEF6]
-                `}>
-                    <a>Penis</a>
-
+                bg-[#FFDEF6] text-center
+                italic font-extrabold text-5xl text-[#6b0023]
+                sm:hidden lg:inline
+                `}> 
+                    <Imagem/>
+                    
+                    <span>Não se Cale !</span>
                 </div>
+
+                {/* Início da Segunda Parte*/}
 
                 <div className="flex flex-row lg:flex-row
                 h-screen w-[50%] items-center justify-center shadow-xl">
                     
                     <div className={`flex flex-col 
-                    rounded-lg lg:w-[50%] w-full text-center
+                    rounded-lg lg:w-[50%] w-full text-center text-ml
                     `}>
 
                         <div className={`
-                        italic font-extrabold text-3xl text-[#6b0023] 
-                        lg:my-[10%] 
+                        italic font-extrabold text-3xl text-[#6b0023] lg:my-[10%] 
                         `}>
                             <span>Não se Cale !</span>
                         </div>
 
-                        <div className="text-ml justify-center items-center">
+                        <div className="justify-center items-center">
 
                             <div className="flex flex-col gap-5">
                                 <input type='text' placeholder="Email" onChange={((e) => setEmail(e.target.value))} 
@@ -55,8 +64,6 @@ export default function Login() {
                                 className="lg:w-[100%] border-2 rounded-lg p-2" />
                             </div>
 
-
-                        
                             {/* <Link to="/"> */}
                             <div onClick={login} className={`
                             cursor-pointer text-white
@@ -66,13 +73,6 @@ export default function Login() {
                             `}>
                                 <span>Entrar</span>
                             </div>
-                            {/* </Link> */}
-
-                            {/* <Link to="">
-                                <div className="text-md text-black lg:my-[5%] text-center">
-                                    <button>Esqueceu a Conta ?</button>
-                                </div>
-                            </Link> */}
 
                             <Link href="/register">
                                 <div className="
@@ -82,15 +82,11 @@ export default function Login() {
                                     <span>Criar uma Conta</span>
                                 </div>
                             </Link>
-
                         </div>
-
                     </div>
-
                 </div>
-
-            </div>
-            <Footer />
+            </div>           
         </div>
+
     )
 }
