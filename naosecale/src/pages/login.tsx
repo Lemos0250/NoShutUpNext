@@ -32,7 +32,7 @@ export default function Login() {
                 h-screen w-[50%]
                 bg-[#FFDEF6] text-center
                 italic font-extrabold text-5xl text-[#6b0023]
-                sm:hidden lg:inline
+                
                 `}> 
                     <Imagem/>
                     
