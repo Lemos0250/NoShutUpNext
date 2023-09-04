@@ -11,7 +11,8 @@ export default function About() {
                 <div className={`
                 bg-white 
                 border-solid shadow-xl 
-                h-[70%] w-[50%] my-[2.5%]
+                h-[85%] w-[50%] my-[2.5%]
+                
                 rounded-lg
                 `}>
 
