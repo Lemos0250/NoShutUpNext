@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Footer } from '../components/Footer';
+import { Footer } from '@/components/Style/Footer';
 import UseAuth from "@/services/hooks/UseAuth";
-import { Imagem } from "@/components/Logo";
+import { Imagem } from "@/components/Style/Logo";
+import { Enter } from "@/components/Logic/Enter";
 
 export default function Register() {
     const [nome, setNome] = useState("")
@@ -94,12 +95,13 @@ export default function Register() {
                             </div>
                         </div>
 
-                        <div className="mt-[5%]">  
+                        <div className="my-[5%]">  
                             <div onClick={actionResgister}      className="text-center cursor-pointer border-solid border-2 rounded-lg p-2 bg-[#a6024f] text-white text-2xl">
 
                                 <span>Cadastrar</span>
                             </div>
-                        </div>   
+                        </div>
+                        <Enter/>   
                         
                     </div>
                 </div>

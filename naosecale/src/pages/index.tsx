@@ -1,7 +1,7 @@
 import { Box } from '../components/Box'
 import { Footer } from '../components/Footer'
 import { Topbar } from '../components/Topbar'
-import { Posts } from '../components/Posts'
+import { Posts } from '../components/Logic/Posts'
 import React, { useState } from 'react'
 
 export default function Index() {

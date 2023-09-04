@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Categorias, Tags } from "./Tags";
+import { Categorias, Tags } from "../Tags";
 import Image from 'next/image'
 
 interface PostsProps {

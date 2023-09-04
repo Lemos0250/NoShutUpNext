@@ -1,7 +1,7 @@
-import { Topbar } from '../components/Topbar'
+import { Topbar } from '../components/Style/Topbar'
 import { SearchBar } from '../components/SearchBar'
-import { Footer } from '../components/Footer'
-import { BoxCategory } from '../components/BoxCategory'
+import { Footer } from '../components/Style/Footer'
+import { BoxCategory } from '../components/Style/BoxCategory'
 import React, { useState, useEffect } from 'react'
 
 export default function Categories() {

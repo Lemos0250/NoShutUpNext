@@ -1,6 +1,6 @@
-import { Box } from '../components/Box'
-import { Footer } from '../components/Footer'
-import { Topbar } from '../components/Topbar'
+import { Box } from '../components/Style/Box'
+import { Footer } from '../components/Style/Footer'
+import { Topbar } from '../components/Style/Topbar'
 import { FaTrashAlt } from 'react-icons/fa';
 import { ImParagraphLeft } from 'react-icons/im';
 import { AiOutlineGif, AiOutlineCamera } from 'react-icons/ai';

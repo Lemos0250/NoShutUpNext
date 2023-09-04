@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { Box } from '../components/Box'
-import { Footer } from '../components/Footer'
-import { Topbar } from '../components/Topbar'
 import axios from '../data/client'
 import Cookie from 'js-cookie'
 import Router from "next/router";
 import Link from "next/link";
 import UseAuth from "@/services/hooks/UseAuth";
 import Image from 'next/image'
-import { Imagem } from "@/components/Logo";
+import { Imagem } from "@/components/Style/Logo";
+import { Enter } from "@/components/Logic/Enter";
 
 export default function Login() {
     const { loginUser } = UseAuth()
@@ -73,14 +71,10 @@ export default function Login() {
                             `}>
                                 <span>Entrar</span>
                             </div>
+                            <Enter/>
 
                             <Link href="/register">
-                                <div className="
-                                border-solid border-2 rounded-lg 
-
-                                p-2 bg-[#a6024f] text-white text-2xl">
-                                    <span>Criar uma Conta</span>
-                                </div>
+                                
                             </Link>
                         </div>
                     </div>

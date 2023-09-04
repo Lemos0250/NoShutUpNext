@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Logo from '../img/Fundo Mulher.png'
+import Logo from '@/img/Fundo Mulher.png'
 
 export function Imagem(){
     return(
