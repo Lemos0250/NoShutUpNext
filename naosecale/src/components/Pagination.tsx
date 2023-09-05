@@ -1,9 +1,3 @@
-import { Box } from './Box'
-import { Footer } from './Footer'
-import { Topbar } from './Topbar'
-
-import { FaHome, FaPhoneAlt, FaFlag, FaInfoCircle, FaExclamationTriangle, FaSearch, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
-
 import React, { useState } from "react";
 
 export function Pagination() {
@@ -27,13 +21,12 @@ export function Pagination() {
 
     return (
         <div className="text-center items-center gap-3 flex flex-row">
-            <button onClick={Back}><FaArrowLeft className="text-lg" /></button>
             {
                 pages.map((pg, i) => (
                     <button key={i} >{pg.page}</button>
                 ))
             }
-            <button onClick={Next}><FaArrowRight className="text-lg" /></button>
+           
         </div>
 
     )

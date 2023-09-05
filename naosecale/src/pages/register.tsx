@@ -30,12 +30,11 @@ export default function Register() {
 
             <div className="flex flex-row">
 
-            <div className={`
-                h-screen w-[50%]
-                bg-[#FFDEF6] text-center
-                italic font-extrabold text-5xl text-[#6b0023]
-                
-                `}>
+                <div className={`
+                    h-screen w-[50%]
+                    bg-[#FFDEF6] text-center
+                    italic font-extrabold text-5xl text-[#6b0023]                
+                    `}>
                     <Imagem/>
                     <span>Não se Cale !</span>
                 </div>
@@ -56,8 +55,8 @@ export default function Register() {
                             <span>Não se Cale !</span>
                         </div>
 
-                        <div className=" flex flex-col 
-                        gap-2 gap-5 py-[5%]">
+                            <div className=" flex flex-col 
+                            gap-2 gap-5 py-[5%]">
                         
                                 <input type='text' onChange={(e) => setNome(e.target.value)} placeholder="Nome"
                                 className="border-2 rounded-lg p-2"/>
