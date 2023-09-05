@@ -1,5 +1,5 @@
-import { Topbar } from '../components/Topbar'
-import { Footer } from '../components/Footer'
+import { Topbar } from '@/components/Style/Topbar'
+import { Footer } from '@/components/Style/Footer'
 
 export default function Contact() {
     return (

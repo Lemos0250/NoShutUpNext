@@ -1,5 +1,5 @@
-import { Topbar } from '../components/Topbar'
-import { Footer } from '../components/Footer'
+import { Topbar } from '@/components/Style/Topbar'
+import { Footer } from '@/components/Style/Footer'
 import { FaSearch } from 'react-icons/fa'
 
 export default function About() {

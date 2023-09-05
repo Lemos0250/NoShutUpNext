@@ -3,6 +3,7 @@ import { Footer } from '@/components/Style/Footer';
 import UseAuth from "@/services/hooks/UseAuth";
 import { Imagem } from "@/components/Style/Logo";
 import { Enter } from "@/components/Logic/Enter";
+import { Oritems } from "@/components/Style/OrItems";
 
 export default function Register() {
     const [nome, setNome] = useState("")
@@ -89,6 +90,7 @@ export default function Register() {
                                 >                          
                                 <option value="masc">Masculino</option>
                                 <option value="fem">Feminino</option>
+                                <option value="fem">Papa</option>
                                 <option value="fem">Outro</option>
 
                                 </select>
@@ -101,6 +103,7 @@ export default function Register() {
                                 <span>Cadastrar</span>
                             </div>
                         </div>
+                        <Oritems/>
                         <Enter/>   
                         
                     </div>

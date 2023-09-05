@@ -7,6 +7,9 @@ import UseAuth from "@/services/hooks/UseAuth";
 import Image from 'next/image'
 import { Imagem } from "@/components/Style/Logo";
 import { Enter } from "@/components/Logic/Enter";
+import { Oritems } from "@/components/Style/OrItems";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "@/Firebase/firebase";
 
 export default function Login() {
     const { loginUser } = UseAuth()
@@ -17,6 +20,20 @@ export default function Login() {
         e.preventDefault();
 
         await loginUser(email, password)
+    }
+
+    async function loginWithGoogle(){
+        const provider = new GoogleAuthProvider()
+        
+        signInWithPopup(auth, provider)
+			.then((result) => {
+				console.log({
+					name: result.user.displayName ?? '',
+					email: result.user.email ?? ''
+				})
+			}).catch((error) => {
+				console.log(error.message)
+			})
     }
 
     return (
@@ -34,7 +51,7 @@ export default function Login() {
                 `}> 
                     <Imagem/>
                     
-                    <span>Não se Cale !</span>
+                    <span>HerVoice Blog</span>
                 </div>
 
                 {/* Início da Segunda Parte*/}
@@ -71,11 +88,10 @@ export default function Login() {
                             `}>
                                 <span>Entrar</span>
                             </div>
-                            <Enter/>
 
-                            <Link href="/register">
-                                
-                            </Link>
+                            <Oritems/>
+                            <Enter loginFunction={loginWithGoogle}/>
+
                         </div>
                     </div>
                 </div>

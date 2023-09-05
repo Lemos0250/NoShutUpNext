@@ -1,5 +1,5 @@
-import { Hamburguer } from './HamburguerBtn'
-import { SearchBar } from './SearchBar'
+import { Hamburguer } from '@/components/HamburguerBtn'
+import { SearchBar } from '@/components/SearchBar'
 import { FaHome, FaPhoneAlt, FaFlag, FaInfoCircle, FaExclamationTriangle, FaSearch } from 'react-icons/fa';
 
 import React from "react";
