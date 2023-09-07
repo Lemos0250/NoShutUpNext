@@ -10,6 +10,7 @@ import { Enter } from "@/components/Logic/Enter";
 import { Oritems } from "@/components/Style/OrItems";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "@/Firebase/firebase";
+import { Imagem2 } from "@/components/Style/PurpleLine";
 
 export default function Login() {
     const { loginUser } = UseAuth()
@@ -93,11 +94,11 @@ export default function Login() {
 
                             <Oritems/>
                             <Enter loginFunction={loginWithGoogle}/>
-
                         </div>
+                        <Imagem2/>
                     </div>
-                </div>
-            </div>           
+                </div>      
+            </div>        
         </div>
 
     )

@@ -6,6 +6,7 @@ import { Enter } from "@/components/Logic/Enter";
 import { Oritems } from "@/components/Style/OrItems";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "@/Firebase/firebase";
+import { Imagem2 } from "@/components/Style/PurpleLine";
 
     export default function Register() {
     const [nome, setNome] = useState("")
@@ -112,7 +113,6 @@ import { auth } from "@/Firebase/firebase";
                         </div>
                         <Oritems/>
                         <Enter/> 
-                        
                     </div>
                 </div>
             </div>
