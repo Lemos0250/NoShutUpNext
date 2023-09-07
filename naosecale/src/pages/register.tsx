@@ -4,8 +4,10 @@ import UseAuth from "@/services/hooks/UseAuth";
 import { Imagem } from "@/components/Style/Logo";
 import { Enter } from "@/components/Logic/Enter";
 import { Oritems } from "@/components/Style/OrItems";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "@/Firebase/firebase";
 
-export default function Register() {
+    export default function Register() {
     const [nome, setNome] = useState("")
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
@@ -24,6 +26,10 @@ export default function Register() {
 
         await createUser(data)
     }
+          
+        interface EnterProps{
+            loginFunction?: () => Promise<void>
+        }
 
     return (
         <div>
@@ -103,7 +109,7 @@ export default function Register() {
                             </div>
                         </div>
                         <Oritems/>
-                        <Enter/>   
+                        <Enter/> 
                         
                     </div>
                 </div>
@@ -111,3 +117,5 @@ export default function Register() {
         </div>
     )
 }
+    
+

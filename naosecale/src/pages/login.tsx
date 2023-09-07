@@ -47,7 +47,7 @@ export default function Login() {
                 h-screen w-[50%]
                 bg-[#FFDEF6] text-center
                 italic font-extrabold text-5xl text-[#6b0023]
-                
+                max-sm:hidden md:visible
                 `}> 
                     <Imagem/>
                     
@@ -56,15 +56,17 @@ export default function Login() {
 
                 {/* Início da Segunda Parte*/}
 
-                <div className="flex flex-row lg:flex-row
-                h-screen w-[50%] items-center justify-center shadow-xl">
+                <div className="flex md:flex-row min-sm:flex-col
+                items-center justify-center shadow-xl
+                h-screen md:w-[50%] max-sm:w-full">
                     
                     <div className={`flex flex-col 
-                    rounded-lg lg:w-[50%] w-full text-center text-ml
+                    rounded-lg w-full text-center text-ml
+                    max-sm:w-[75%] lg:w-[50%] md:w-[75%]
                     `}>
 
                         <div className={`
-                        italic font-extrabold text-3xl text-[#6b0023] lg:my-[10%] 
+                        italic font-extrabold text-3xl text-[#6b0023] md:my-[10%] max-sm:my-[10%]
                         `}>
                             <span>Não se Cale !</span>
                         </div>
