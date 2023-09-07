@@ -39,7 +39,8 @@ import { auth } from "@/Firebase/firebase";
                 <div className={`
                     h-screen w-[50%]
                     bg-[#FFDEF6] text-center
-                    italic font-extrabold text-5xl text-[#6b0023]                
+                    italic font-extrabold text-5xl text-[#6b0023]
+                    max-sm:hidden md:visible                
                     `}>
                     <Imagem/>
                     <span>Não se Cale !</span>
@@ -48,12 +49,13 @@ import { auth } from "@/Firebase/firebase";
 
                 <div className={`
                 flex flex-col
-                h-screen w-[50%]
-                items-center justify-center shadow-xl`}>
+                items-center justify-center shadow-xl
+                h-screen md:w-[50%] max-sm:w-full
+                `}>
 
                     <div className={`
                     justify-center items-center rounded-lg 
-                    lg:w-[50%] w-full`}>
+                    max-sm:w-[75%] lg:w-[50%] md:w-[75%]`}>
 
                         <div className={`
                         italic font-extrabold text-3xl text-[#6b0023] text-center
