@@ -23,9 +23,9 @@ export default function Write() {
                     <div className={`
                     bg-white 
                     border-solid shadow-xl 
-                    h-[85%] w-[50%] my-[2.5%]
-                
-                    rounded-lg
+                    h-[85%] w-[50%] 
+                    md:my-[2.5%]
+                    max-sm:w-screen rounded-lg
                     `}>
                         <div className={`
                         flex flex-col
@@ -36,8 +36,9 @@ export default function Write() {
                             <span className="font-semibold text-3xl">Administração</span>
                            
                             <div className={`
-                            lg:w-[70%] h-[35%] 
-                            text-xl 
+                            md:w-[70%] md:h-[35%]
+                            max-sm:w-screen max-sm:h-[25%]
+                            text-2xl
                             `}>
                                 <textarea placeholder="Escrever..." className={`
                                 w-full h-full
@@ -49,7 +50,11 @@ export default function Write() {
                             </div>
 
 
-                            <div className="justify-start flex flex-row items-center gap-5 h-[15%]">
+                            <div className={`
+                            flex flex-row 
+                            items-center justify-start 
+                            md:gap-5 max-sm:gap-14 h-[15%]
+                            `}>
                                 <div className="lg:ml-[-70%]">
                                     <FaTrashAlt className="text-2xl hover:text-[#6b0023]" />
                                 </div>
@@ -70,9 +75,10 @@ export default function Write() {
                             </div>
 
                             <div className={`
-                            lg:justify-end items-start 
-                            flex w-[60%] h-[15%] 
-                            gap-2
+                            flex md:justify-end max-sm:justify-end
+                            items-start 
+                            md:w-[70%] max-sm:w-[85%]
+                            gap-2 
                             `}>
                                 <ImParagraphLeft className="text-3xl hover:text-[#6b0023] hover:box-content" />
                                 <AiOutlineGif className="text-3xl border-2 border-black hover:text-[#6b0023]  " />

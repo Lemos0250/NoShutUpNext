@@ -6,25 +6,29 @@ export default function About() {
     return (
         <div>
             <Topbar />
-            <div className="flex flex-col lg:flex-row bg-[#FFDEF6] justify-center">
+            <div className="flex flex-col md:flex-row 
+            bg-[#FFDEF6] justify-center items-center">
 
                 <div className={`
                 bg-white 
-                border-solid shadow-xl 
-                h-[85%] w-[50%] my-[2.5%]
-                
-                rounded-lg
+                border-solid shadow-xl rounded-lg
+                md:h-[85%] md:my-[2.5%] max-sm:my-[10%]
+                md:w-[50%] max-sm:w-screen             
                 `}>
 
                     <div className={`
-                    flex flex-col 
-                    lg:flex-row lg:m-20 lg:ml-56 lg:mt-15 text-4xl
+                    flex
+                    md:p-[5%] max-sm:p-[10%] 
+                    md:gap-10 max-sm:gap-2
+                    items-stretch justify-center
+                    text-4xl
                     `}>
                         <span>Sobre</span>
                         <input type="text" className={`
-                        "hidden lg:flex shadow-lg border-2 hover:border-pink-500 ml-20 rounded-full transition-colors
-                        w-[60%]
-                        lg:ml-10 text-2xl"
+                        text-2xl 
+                        shadow-lg border-2 rounded-full 
+                        hover:border-pink-500 transition-colors
+                        md:w-[40%] max-sm:w-[65%]
                         `} />
                     </div>
 

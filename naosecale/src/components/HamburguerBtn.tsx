@@ -16,13 +16,16 @@ export function Hamburguer() {
     return (
         <Menu>
             <MenuButton >
-                <div className="flex flex-col items-center justify-center text-lg gap-1">
+                <div className="flex flex-col 
+                items-center justify-center 
+                text-lg gap-1">
                     <div className="w-8 h-1 bg-white rounded-full" />
                     <div className="w-8 h-1 bg-white rounded-full" />
                     <div className="w-8 h-1 bg-white rounded-full" />
                 </div>
             </MenuButton>
             <MenuList>
+            <div className='bg-white border-2 p-3 rounded-2xl'>
                 <div className="text-pink-600">
                     <Link href="/">
                         <MenuItem>
@@ -65,6 +68,7 @@ export function Hamburguer() {
                         </MenuItem>
                     </div>
                 </div>
+            </div>
             </MenuList>
         </Menu>
     )
