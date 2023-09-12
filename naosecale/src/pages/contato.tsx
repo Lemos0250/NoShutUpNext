@@ -6,13 +6,42 @@ export default function Contact() {
         <>
             <div>
                 <Topbar/>
-                <div className="flex flex-col w-screen h-screen lg:h-screen lg:flex-row items-center justify-center shadow-xl bg-[#FFDEF6]">
+                <div className={`
+                flex flex-col lg:flex-row
+                h-screen items-center justify-center 
+                shadow-xl bg-[#FFDEF6]
+                `}>
         
-                    <div className="flex flex-col items-start justify-center lg:mt-[0%] lg:w-[50%] h-[85%] w-[90%] h-shadow-xl bg-white rounded-lg shadow-xl">
+                    <div className={`
+                    bg-white 
+                    rounded-lg shadow-xl
+                    md:h-[85%] max-sm:h-[85%]
+                    md:w-[50%] max-sm:w-screen
+                    `}>
 
-                        <div className="flex lg:flex-row lg:m-[10%] lg:ml-[25%] lg:mt-[1%] flex-col w-full items-start justify-start text-4xl ml-[30%] lg:mb-[5%]">
-                            <span>Contato</span>
-                            <input type="text" className="hidden lg:grid lg:flex-row shadow-lg border-2 hover:border-pink-500 ml-20 rounded-full text-black transition-colors margin lg:ml-20 lg:w-60 lg:ml-10 lg:text-2xl"/>
+                        <div className={`
+                        flex flex-col
+                        items-center gap-5
+                        md:my-[5%] max-sm:my-[10%]
+                        `}>
+                            <span className="text-4xl">Contato</span>
+                            <input type="text" className={`
+                            md:w-[35%] max-sm:w-[70%] 
+                            p-[1%] lg:grid items-center
+                            shadow-lg border-2 rounded-full hover:border-pink-500 ml-20 transition-colors
+                            `}/>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        <span>Nome da Pessoa.........................................(99)9 9999-9999</span>
+                        
                         </div>
 
                     </div>
