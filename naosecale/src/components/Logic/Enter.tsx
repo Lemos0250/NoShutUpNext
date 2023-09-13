@@ -1,4 +1,5 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, getRedirectResult } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, getRedirectResult } from "firebase/auth";
+import { MouseEventHandler } from "react";
 
 interface EnterProps{
     loginFunction?: () => Promise<void>
@@ -24,7 +25,9 @@ export function Enter (props: EnterProps) {
                     <span>Continuar com Google</span>
             </div>
 
-            <div className={`
+            <div
+            onClick={props.loginFunction}
+            className={`
                 flex
                 justify-center items-center
                 border-solid border-2 rounded-lg

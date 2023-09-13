@@ -8,9 +8,10 @@ import Image from 'next/image'
 import { Imagem } from "@/components/Style/Logo";
 import { Enter } from "@/components/Logic/Enter";
 import { Oritems } from "@/components/Style/OrItems";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "@/Firebase/firebase";
 import { Imagem2 } from "@/components/Style/PurpleLine";
+import Result from "postcss/lib/result";
 
 export default function Login() {
     const { loginUser } = UseAuth()
@@ -21,6 +22,21 @@ export default function Login() {
         e.preventDefault();
 
         await loginUser(email, password)
+    }
+
+    async function loginWithFacebook(){
+        const provider = new FacebookAuthProvider()
+        
+        signInWithPopup(auth,provider)
+        .then((result) => {
+            console.log({
+                name: result.user.displayName ?? '',
+                email: result.user.email ?? ''
+            })
+        }).catch((error) => {
+            console.log(error.message)
+        })
+        
     }
 
     async function loginWithGoogle(){
