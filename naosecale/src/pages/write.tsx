@@ -9,6 +9,11 @@ import { useState } from 'react';
 export default function Write() {
 
     const [image, setImage] = useState('')
+    const [text, setText] = useState('')
+
+    function clearArea() {
+     setText('')   
+    }
     
     return (
         
@@ -40,9 +45,12 @@ export default function Write() {
                             max-sm:w-screen max-sm:h-[25%]
                             text-2xl
                             `}>
-                                <textarea placeholder="Escrever..." className={`
+                                <textarea 
+                                onChange={(e) => setText(e.target.value)}
+                                value={text}
+                                placeholder="Escrever..." 
+                                className={`
                                 w-full h-full
-                                
                                 border-black 
                                 hover:border-pink-500 
                                 border-4 shadow-xl transition-colors rounded-3xl resize-none bg-[#efe3ec]
@@ -56,7 +64,9 @@ export default function Write() {
                             md:gap-5 max-sm:gap-14 h-[15%]
                             `}>
                                 <div className="lg:ml-[-70%]">
-                                    <FaTrashAlt className="text-2xl hover:text-[#6b0023]" />
+                                    <FaTrashAlt 
+                                    onClick={clearArea}
+                                    className="text-2xl hover:text-[#6b0023]" />
                                 </div>
 
                                 <div className="text-pink-500 hover:text-[#6b0023] lg:ml-[150%]">

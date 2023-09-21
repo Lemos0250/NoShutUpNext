@@ -14,29 +14,18 @@ import { Imagem2 } from "@/components/Style/PurpleLine";
 import Result from "postcss/lib/result";
 
 export default function Login() {
-    const { loginUser } = UseAuth()
+    const { loginUser } = UseAuth();
+    /* const { loginPassword } = UseAuth(); */
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    
 
-    async function login(e: any) {
-        e.preventDefault();
-
-        await loginUser(email, password)
-    }
-
-    async function loginWithFacebook(){
-        const provider = new FacebookAuthProvider()
-        
-        signInWithPopup(auth,provider)
-        .then((result) => {
-            console.log({
-                name: result.user.displayName ?? '',
-                email: result.user.email ?? ''
-            })
-        }).catch((error) => {
-            console.log(error.message)
-        })
-        
+    async function handleLoginSubmit() {
+        if (email === '' || password === '') {
+            alert('S !')
+        } else {
+            /* await loginPassword(email, password) */
+        }
     }
 
     async function loginWithGoogle(){
@@ -99,10 +88,12 @@ export default function Login() {
                             </div>
 
                             {/* <Link to="/"> */}
-                            <div onClick={login} className={`
+                            <div 
+                            onClick={handleLoginSubmit} 
+                            className=
+                            {`
                             cursor-pointer text-white
-                            border-solid border-2 rounded-lg 
-                            
+                            border-solid border-2 rounded-lg  
                             p-2 bg-[#a6024f] text-2xl my-[5%]
                             `}>
                                 <span>Entrar</span>

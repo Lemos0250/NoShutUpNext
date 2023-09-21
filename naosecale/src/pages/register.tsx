@@ -16,6 +16,20 @@ import { Imagem2 } from "@/components/Style/PurpleLine";
     const [gender, setGender] = useState("")
     const { createUser } = UseAuth()
 
+    function handleRegisterSubmit() {
+        if (nome === '') {
+            alert('Por favor insira o Nome')
+        } if (apelido === ''){
+            alert('Por favor insira o Apelido')
+        } if (email === ''){
+            alert('Por favor insira o E-mail')
+        } if (senha === ''){
+            alert('Por favor insira a Senha')
+        } else {
+             
+        }
+    }
+
     async function actionResgister() {
         const data = {
             name: nome,
@@ -24,7 +38,6 @@ import { Imagem2 } from "@/components/Style/PurpleLine";
             gender,
             nick: apelido
         }
-
         await createUser(data)
     }
           
@@ -67,16 +80,23 @@ import { Imagem2 } from "@/components/Style/PurpleLine";
                             <div className=" flex flex-col 
                             gap-2 gap-5 py-[5%]">
                         
-                                <input type='text' onChange={(e) => setNome(e.target.value)} placeholder="Nome"
+                                <input type='text' onChange={(e) => 
+                                setNome(e.target.value)} 
+                                placeholder="Nome"
                                 className="border-2 rounded-lg p-2"/>
 
-                                <input type='text' onChange={(e) => setApelido(e.target.value)} placeholder="Apelido"
+                                <input type='text' onChange={(e) => 
+                                setApelido(e.target.value)} placeholder="Apelido"
                                 className="border-2 rounded-lg p-2"/>
 
-                                <input type='email' onChange={(e) => setEmail(e.target.value)} placeholder="Email"
+                                <input type='email' onChange={(e) => 
+                                setEmail(e.target.value)} 
+                                placeholder="Email"
                                 className="border-2 rounded-lg p-2"/>
 
-                                <input type='password' onChange={(e) => setSenha(e.target.value)} placeholder="Senha"
+                                <input type='password' onChange={(e) => 
+                                setSenha(e.target.value)} 
+                                placeholder="Senha"
                                 className="border-2 rounded-lg p-2"/>
                             </div>
 
@@ -106,7 +126,8 @@ import { Imagem2 } from "@/components/Style/PurpleLine";
                         </div>
 
                         <div className="my-[5%]">  
-                            <div onClick={actionResgister}      className="text-center cursor-pointer border-solid border-2 rounded-lg p-2 bg-[#a6024f] text-white text-2xl">
+                            <div onClick={handleRegisterSubmit}      
+                            className="text-center cursor-pointer border-solid border-2 rounded-lg p-2 bg-[#a6024f] text-white text-2xl">
 
                                 <span>Cadastrar</span>
                             </div>
